@@ -1,0 +1,1239 @@
+/* App.css - Clean Mobbin-Grade Layout & UI */
+
+/* ── Header ── */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background-color: rgba(11, 15, 23, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  flex-shrink: 0;
+}
+
+.brand-text-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-symbol {
+  width: 36px;
+  height: 36px;
+  background-color: var(--brand-primary);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #090d16;
+  flex-shrink: 0;
+}
+
+.brand-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+
+.brand-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--border-default);
+  color: var(--text-secondary);
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.header-center-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.service-area-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-location-sub {
+  display: none;
+  font-size: 0.65rem;
+  color: var(--brand-primary);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-top: 1px;
+}
+
+.hotline-link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.hotline-link:hover {
+  border-color: var(--brand-primary);
+  color: var(--brand-primary);
+}
+
+.ecosystem-btn {
+  padding: 0.45rem 0.8rem;
+  font-size: 0.82rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+
+.header-order-btn {
+  padding: 0.45rem 1rem;
+  font-size: 0.84rem;
+  white-space: nowrap;
+}
+
+/* ── Hero / Configurator Section ── */
+.hero-wrapper {
+  padding: 3.5rem 0 2.5rem;
+}
+
+.hero-main-layout {
+  display: grid;
+  grid-template-columns: 1fr 440px;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--brand-primary);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.live-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: #10b981;
+  display: inline-block;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: live-dot-pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+@keyframes live-dot-pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.hero-headline {
+  font-size: 2.6rem;
+  line-height: 1.15;
+  margin-bottom: 0.85rem;
+  color: #ffffff;
+}
+
+.hero-desc {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 580px;
+}
+
+.hero-cta-group {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-main-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-secondary-btns {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.hero-sub-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.hero-banner-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-default);
+  background-color: var(--bg-surface);
+}
+
+.hero-banner-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-banner-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(11, 15, 23, 0.95) 10%, rgba(11, 15, 23, 0.2) 80%, transparent 100%);
+}
+
+.hero-banner-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.hero-banner-sub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* ── Sleek 1-Line Trust Pills Bar ── */
+.trust-pills-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  margin-top: 1.75rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-full);
+}
+
+.trust-pill-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+/* ── Sand Grade Configurator ── */
+.config-section {
+  padding: 2.5rem 0 4rem;
+}
+
+.section-label-group {
+  margin-bottom: 1.5rem;
+}
+
+.section-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--brand-primary);
+  margin-bottom: 0.35rem;
+}
+
+.section-title {
+  font-size: 1.65rem;
+  font-weight: 800;
+}
+
+.section-sub {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+/* Segmented Grade Bar */
+.grade-selector-container {
+  margin-bottom: 1.5rem;
+}
+
+.grade-sub-note {
+  margin-top: 0.65rem;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.grade-sub-note strong {
+  color: var(--brand-primary);
+  font-weight: 600;
+}
+
+/* ── Vehicle Fleet Cards (Mobbin Product Grid) ── */
+.fleet-tier-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.75rem;
+  margin-bottom: 0.85rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--border-subtle);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.fleet-tier-badge {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-dim);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.fleet-grid {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.fleet-grid-standard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.fleet-grid-bulk {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.fleet-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color 0.15s, background-color 0.15s;
+  cursor: pointer;
+  position: relative;
+}
+
+.fleet-card:hover {
+  border-color: var(--text-dim);
+  background-color: var(--bg-surface-elevated);
+}
+
+.fleet-card.is-selected {
+  border: 2px solid var(--brand-primary);
+  background-color: var(--bg-surface-elevated);
+}
+
+.fleet-card-media {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  background-color: #000000;
+  overflow: hidden;
+}
+
+.fleet-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.fleet-tonnage-tag {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background-color: rgba(11, 15, 23, 0.85);
+  backdrop-filter: blur(4px);
+  border: 1px solid var(--border-default);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: var(--radius-sm);
+}
+
+.fleet-popular-tag {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.fleet-card-body {
+  padding: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.fleet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.2rem;
+}
+
+.fleet-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.fleet-specs-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.spec-dot {
+  color: var(--text-dim);
+}
+
+.fleet-card-footer {
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-val {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #ffffff;
+  font-family: var(--font-heading);
+}
+
+.fleet-select-btn {
+  padding: 0.45rem 1rem;
+  font-size: 0.82rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+}
+
+/* ── Fair Trade On-Site Inspection Banner ── */
+.inspection-guarantee-banner {
+  margin-top: 2rem;
+  background-color: var(--bg-surface);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-radius: var(--radius-full);
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.guarantee-text-block {
+  font-size: 0.82rem;
+  color: #cbd5e1;
+  flex: 1;
+}
+
+.guarantee-text-block strong {
+  color: #ffffff;
+}
+
+.guarantee-payment-methods {
+  display: flex;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.pay-method-tag {
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--border-default);
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* ── Fixed / Sticky Checkout Dock (Mobbin Uber Freight Pattern) ── */
+.checkout-bar-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 80;
+  background-color: rgba(14, 19, 29, 0.98);
+  backdrop-filter: blur(16px);
+  border-top: 1px solid var(--border-default);
+  padding: 0.85rem 0;
+  box-shadow: var(--shadow-drawer);
+  transform: translateY(120%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+}
+
+.checkout-bar-container.visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+main {
+  padding-bottom: 120px;
+}
+
+.checkout-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.checkout-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.checkout-truck-info h4 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
+.dock-truck-desktop {
+  display: inline;
+}
+
+.dock-truck-mobile {
+  display: none;
+}
+
+.checkout-truck-info p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.trip-counter {
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  padding: 2px 4px;
+}
+
+.trip-counter-btn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  border-radius: 4px;
+  transition: background-color 0.15s;
+}
+
+.trip-counter-btn:hover {
+  background-color: var(--bg-surface-elevated);
+}
+
+.trip-count-display {
+  padding: 0 0.6rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #ffffff;
+  min-width: 48px;
+  text-align: center;
+}
+
+.checkout-action-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.checkout-total-block {
+  text-align: right;
+}
+
+.checkout-total-label {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.checkout-total-amount {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.cta-mobile-text {
+  display: none;
+}
+
+.cta-desktop-text {
+  display: inline;
+}
+
+/* ── Modal (Mobbin Action Sheet Pattern) ── */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 1rem;
+}
+
+.modal-sheet {
+  width: 100%;
+  max-width: 520px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-lg);
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-sheet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+.modal-sheet-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.modal-sheet-sub {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+.modal-close-trigger {
+  color: var(--text-muted);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.modal-close-trigger:hover {
+  background-color: var(--bg-surface-elevated);
+  color: #ffffff;
+}
+
+.modal-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.modal-form-grid .input-field-group {
+  margin-bottom: 0;
+}
+
+.order-recap-box {
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 0.95rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-field-group {
+  margin-bottom: 0.75rem;
+}
+
+.input-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.35rem;
+}
+
+.text-input, .select-input, .textarea-input {
+  width: 100%;
+  padding: 0.75rem 0.95rem;
+  min-height: 48px;
+  background-color: var(--bg-app);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  color: #ffffff;
+  font-size: 1rem; /* 16px prevents iOS auto-zoom on mobile */
+  font-family: inherit;
+  transition: border-color 0.15s;
+}
+
+.text-input:focus, .select-input:focus, .textarea-input:focus {
+  outline: none;
+  border-color: var(--brand-primary);
+}
+
+.quick-zone-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.zone-chip {
+  padding: 0.2rem 0.55rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--border-default);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  min-height: 26px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.zone-chip:hover {
+  background-color: var(--border-default);
+  color: #ffffff;
+}
+
+.zone-chip.active {
+  background-color: var(--brand-primary);
+  border-color: var(--brand-primary);
+  color: #000000;
+  font-weight: 700;
+}
+
+.zone-disclaimer-note {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+  line-height: 1.35;
+}
+
+.modal-action-buttons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.modal-submit-btn {
+  flex: 1;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.modal-call-btn {
+  min-height: 48px;
+  min-width: 48px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Coming Soon / Materials Expansion ── */
+.expansion-section {
+  padding: 3rem 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.expansion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.expansion-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.15rem;
+}
+
+.expansion-card:hover {
+  border-color: var(--border-default);
+}
+
+.expansion-card-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.expansion-card-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+/* ── Footer ── */
+.site-footer {
+  border-top: 1px solid var(--border-subtle);
+  padding: 2.5rem 0 2rem;
+  background-color: var(--bg-app);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .hero-main-layout {
+    grid-template-columns: 1fr;
+  }
+  .hero-headline {
+    font-size: 2.1rem;
+  }
+  .features-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .header-center-info {
+    display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .app-header {
+    height: 58px;
+  }
+  .header-container {
+    height: 58px;
+  }
+  .brand-wrapper {
+    gap: 0.5rem;
+  }
+  .brand-symbol {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+  }
+  .brand-title {
+    font-size: 0.95rem;
+  }
+  .brand-badge {
+    display: none;
+  }
+  .brand-location-sub {
+    display: block;
+    font-size: 0.62rem;
+    white-space: nowrap;
+  }
+  .header-actions {
+    gap: 0.35rem;
+    flex-shrink: 0;
+    align-items: center;
+  }
+  .header-actions .hotline-link {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    color: var(--brand-primary);
+    background-color: var(--bg-surface);
+  }
+  .hotline-text {
+    display: none;
+  }
+  .header-actions .ecosystem-btn {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    padding: 0 !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full) !important;
+    color: #ffffff;
+    background-color: var(--bg-surface);
+  }
+  .header-actions .ecosystem-btn svg {
+    stroke: #ffffff;
+  }
+  .ecosystem-text {
+    display: none;
+  }
+  .header-order-btn {
+    padding: 0.38rem 0.65rem;
+    font-size: 0.76rem;
+    font-weight: 700;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    width: 100%;
+  }
+  .hero-main-btn {
+    width: 100%;
+    padding: 0.62rem 1rem;
+    font-size: 0.86rem;
+    justify-content: center;
+  }
+  .hero-secondary-btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.45rem;
+    width: 100%;
+  }
+  .hero-sub-btn {
+    width: 100%;
+    padding: 0.5rem 0.55rem;
+    font-size: 0.78rem;
+    justify-content: center;
+    gap: 0.35rem;
+    white-space: nowrap;
+  }
+  .expansion-boq-btn {
+    padding: 0.48rem 0.85rem;
+    font-size: 0.8rem;
+    width: 100%;
+    margin-top: 0.65rem;
+    justify-content: center;
+  }
+
+  .cta-desktop-text {
+    display: none;
+  }
+  .cta-mobile-text {
+    display: inline;
+  }
+  .dock-trip-tag {
+    color: var(--brand-primary);
+  }
+
+  .checkout-bar-container {
+    padding: 0.65rem 0 calc(0.65rem + env(safe-area-inset-bottom, 0px));
+  }
+  .checkout-bar-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    padding: 0 1rem;
+  }
+  .checkout-meta {
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  .checkout-truck-info {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .checkout-truck-info h4 {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+  }
+  .dock-truck-desktop {
+    display: none;
+  }
+  .dock-truck-mobile {
+    display: inline;
+  }
+  .checkout-truck-info p {
+    display: none;
+  }
+  .trip-counter {
+    display: none; /* Mobile adjustments happen via fleet cards or modal */
+  }
+  .checkout-action-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+  .checkout-total-block {
+    text-align: left;
+  }
+  .checkout-total-label {
+    display: none;
+  }
+  .checkout-total-amount {
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: var(--brand-primary);
+    white-space: nowrap;
+  }
+  .checkout-action-group .dock-cta-btn {
+    padding: 0.55rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: var(--radius-full);
+  }
+  /* Mobile Compact Fleet Cards (Item 5) */
+  .fleet-grid,
+  .fleet-grid-standard,
+  .fleet-grid-bulk {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    margin-top: 0.65rem;
+  }
+  .fleet-tier-label {
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.78rem;
+  }
+  .fleet-tier-badge {
+    display: none;
+  }
+  .fleet-access-pill {
+    display: none; /* Hidden on compact 90px mobile cards to maintain ultra-compact scan */
+  }
+  .inspection-guarantee-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 0.85rem;
+  }
+  .guarantee-payment-methods {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+  .dispatch-confirm-strip {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .dispatch-selection-line {
+    font-size: 0.92rem;
+    flex-wrap: wrap;
+  }
+  .dispatch-submit-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .fleet-card {
+    flex-direction: row;
+    align-items: center;
+    padding: 0.65rem;
+    min-height: 92px;
+    border-radius: var(--radius-md);
+  }
+  .fleet-card-media {
+    width: 90px;
+    height: 76px;
+    flex-shrink: 0;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+  .fleet-tonnage-tag {
+    font-size: 0.62rem;
+    padding: 1px 4px;
+    bottom: 4px;
+    right: 4px;
+  }
+  .fleet-popular-tag {
+    display: none;
+  }
+  .fleet-card-body {
+    padding: 0 0 0 0.75rem;
+    flex: 1;
+    min-width: 0;
+    justify-content: center;
+  }
+  .fleet-header {
+    margin-bottom: 2px;
+  }
+  .fleet-name {
+    font-size: 0.95rem;
+  }
+  .fleet-specs-row {
+    font-size: 0.72rem;
+    margin-top: 1px;
+    margin-bottom: 0.35rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .fleet-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2px;
+    padding-top: 0;
+    border-top: none;
+  }
+  .fleet-card-footer .price-val {
+    font-size: 1.05rem;
+    color: var(--brand-primary);
+  }
+  .fleet-select-btn {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.75rem;
+    border-radius: var(--radius-full);
+  }
+
+  /* Mobile Segmented Control (Item 8) */
+  .segmented-control {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 4px;
+    padding: 3px;
+  }
+  .segmented-control::-webkit-scrollbar {
+    display: none;
+  }
+  .segmented-option {
+    flex: 1 0 auto;
+    padding: 0.5rem 0.65rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+  .grade-sub-note {
+    font-size: 0.75rem;
+    margin-top: 0.45rem;
+  }
+
+  .trust-pills-bar {
+    border-radius: var(--radius-md);
+    padding: 0.75rem 1rem;
+    gap: 0.5rem;
+  }
+  .trust-pill-item {
+    font-size: 0.75rem;
+  }
+
+  /* Mobile Modal Optimizations (Item 6 & 7) */
+  .modal-sheet {
+    padding: 1.25rem 1rem;
+    border-radius: var(--radius-lg);
+    max-height: 94vh;
+  }
+  .modal-form-grid {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+  .modal-action-buttons {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  .modal-submit-btn {
+    font-size: 0.84rem;
+    padding: 0.75rem 0.5rem;
+  }
+
+  main {
+    padding-bottom: 100px;
+  }
+}
